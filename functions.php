@@ -62,6 +62,17 @@
 
  // --------------------------------------------------
 
+   	add_filter('ifwp_updater_themes_and_plugins', function($themes_and_plugins){
+		$themes_and_plugins[] = [
+			'full_path' => __FILE__,
+			'metadata_url' => 'https://github.com/ifwp/ifwp-theme',
+			'slug' => 'ifwp-theme',
+		];
+		return $themes_and_plugins;
+   	});
+
+ // --------------------------------------------------
+
 	add_theme_support('post-thumbnails');
 	add_theme_support('title-tag');
 
