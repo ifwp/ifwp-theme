@@ -56,4 +56,6 @@ add_theme_support('title-tag');
 
 // --------------------------------------------------
 
-ifwp_build_update_checker('https://github.com/ifwp/ifwp-theme', __FILE__, 'ifwp-theme');
+if(function_exists('ifwp_build_update_checker')){
+	ifwp_build_update_checker('https://github.com/ifwp/ifwp-theme', __FILE__, 'ifwp-theme');
+}
