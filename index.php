@@ -4,10 +4,10 @@
 	if(have_posts()){
 		while(have_posts()){
 			the_post();
-			if(class_exists('FLBuilderModel') and FLBuilderModel::is_builder_enabled()){
-				the_content();
-			} else {
-				// Silence is golden.
+			if(class_exists('FLBuilderModel')){
+				if(FLBuilderModel::is_builder_enabled()){
+					the_content(); // Silence is golden.
+				}
 			}
 		}
 	}

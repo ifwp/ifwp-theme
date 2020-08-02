@@ -11,6 +11,6 @@
 		wp_head(); ?>
     </head>
     <body <?php body_class(); ?>><?php
-		do_action('vidsoe_before_header');
-		do_action('vidsoe_header');
-		do_action('vidsoe_after_header');
+		do_action('ifwp_before_header');
+		do_action('ifwp_header');
+		do_action('ifwp_after_header');
