@@ -51,6 +51,13 @@ add_filter('fl_theme_builder_part_hooks', function(){
 
 // --------------------------------------------------
 
+add_action('wp_enqueue_scripts', function(){
+   wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', [], '4.5.3');
+   wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.css', ['jquery'], '4.5.3', true);
+});
+
+// --------------------------------------------------
+
 add_theme_support('post-thumbnails');
 add_theme_support('title-tag');
 
